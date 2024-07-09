@@ -8,13 +8,6 @@ pipeline {
 
     
 
-    stages {
-        stage('Clone Repository') {
-            steps {
-                git url: 'https://github.com/Pratik562356/maven.git', branch: 'main'
-            }
-        }
-
         stage('Build') {
             steps {
                 sh 'mvn clean install'
